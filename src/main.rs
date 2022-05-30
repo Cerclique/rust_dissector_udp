@@ -61,6 +61,8 @@ struct Data {
     ether_NONE: [u8; 6],
     guid_NONE: [u8; 16],
     oid_NONE: [u8; 16],
+    answer_to_universe: u8,
+    temperature: i32
 }
 
 fn main() -> std::io::Result<()> {
@@ -151,6 +153,8 @@ fn main() -> std::io::Result<()> {
         guid_NONE: *Uuid::new_v4().as_bytes(),
         oid_NONE: rand::random(),
         none_NONE: rand::random(),
+        answer_to_universe: 42,
+        temperature: -273
     };
 
     // ----- SPECIFIC END -----
